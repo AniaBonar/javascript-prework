@@ -27,3 +27,24 @@ else if(playerMove == 3){
 }
 printMassage ('Zagrałem ' + computerMove + '! Jeśli Twój ruch to kamień, to jest REMIS!')
 
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+
+console.log('Gracz wpisał: ' + playerInput);
+
+let playerMove = 'nieznany ruch';
+let computerMove ='kamień';
+
+if(playerInput == '1'){
+  playerMove = 'kamień';
+}
+
+printMessage('Twój ruch to: ' + playerMove  +'! Jeśli Twój ruch to kamień, to jest REMIS!');
+
+else if (playerInput == '2'){
+	playerMove = 'papier';
+}
+printMessage ( 'Twój ruch to: ' + playerMove  +'! Jeśli Twój ruch to papier, to wygrywasz!')
+
+else if (playerInput == 3){
+	playerMove ='nożyce';
+}
