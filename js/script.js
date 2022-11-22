@@ -1,17 +1,15 @@
-
-
-
- let randomNumber = Match.floor(Match.random ()* 3 + 1);
+let randomNumber = Math.floor(Math.random ()* 3 + 1);
  console.log ('Wylosowana liczba to: ' + randomNumber);
  let computerMove = 'nieznany ruch';
 
  if (randomNumber == 1) {
     computerMove = 'kamień';
  printMessage ('Mój ruch to: ' + computerMove);
+
  } else if (randomNumber == 2) {
     computerMove ='noźyce';
     printMessage ('Mój ruch to: ' + computerMove);
- } else (randomNumber == 3) {
+ } else if (randomNumber == 3) {
     computerMove = 'papier';
     printMessage ('Mój ruch to; ' + computerMove);
 }
@@ -26,9 +24,22 @@ if (playerInput == '1') {
 } else if (playerInput == '2') {
     playerMove = 'papier';
     printMessage ('Twój ruch to: ' + playerMove);
-} else ( playerMove == '3'); {
+} else if ( playerInput == '3') {
     playerMove = 'noźyce';
     printMessage ('Twój ruch to: ' + playerMove);
 }
 
+if(playerMove === computerMove) {
+    printMessage('remis');
+} else if(
+    playerMove === 'papier' && computerMove === 'kamień' ||
+    playerMove === 'kamień' && computerMove === 'noźyce' ||
+    playerMove === 'noźyce' && computerMove === 'papier'
+) {
+    printMessage('wygrana')
+}
+
+else {
+    printMessage('przegrana');
+}
  
